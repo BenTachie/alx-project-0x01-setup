@@ -10,14 +10,14 @@ const UserCard: React.FC<UserProps> = ({ name, email, phone, website, company, a
 
       <div className="mt-4">
         <h4 className="text-sm font-bold text-gray-700">🏢 Company</h4>
-        <p className="text-sm text-gray-600">{company.name}</p>
-        <p className="text-xs text-gray-500 italic">"{company.catchPhrase}"</p>
+        <p className="text-sm text-gray-600">{company?.name ?? "N/A"}</p>
+        <p className="text-xs text-gray-500 italic">"{company?.catchPhrase ?? "No tagline"}"</p>
       </div>
 
       <div className="mt-4">
         <h4 className="text-sm font-bold text-gray-700">📍 Address</h4>
         <p className="text-sm text-gray-600">
-          {address.suite}, {address.street}, {address.city}, {address.zipcode}
+          {address?.suite ?? "N/A"}, {address?.street ?? "N/A"}, {address?.city ?? "N/A"}, {address?.zipcode ?? "N/A"}
         </p>
       </div>
     </div>

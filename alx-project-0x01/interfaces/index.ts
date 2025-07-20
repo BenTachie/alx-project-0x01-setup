@@ -12,7 +12,7 @@ export interface UserProps {
   email: string;
   phone: string;
   website: string;
-  address: {
+  address?: {
     street: string;
     suite: string;
     city: string;
@@ -22,10 +22,10 @@ export interface UserProps {
       lng: string;
     };
   };
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
+  company?: {
+    name?: string;
+    catchPhrase?: string;
+    bs?: string;
   };
 }
 
@@ -58,12 +58,13 @@ export interface UserData {
       lng: string;
     };
   };
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
+  company?: {
+    name?: string;
+    catchPhrase?: string;
+    bs?: string;
   };
 }
+
 
 export interface UserModalProps {
   isOpen: boolean;
