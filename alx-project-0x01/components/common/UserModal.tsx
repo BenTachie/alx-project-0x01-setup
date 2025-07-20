@@ -1,7 +1,7 @@
 import { UserData, UserModalProps } from "@/interfaces";
 import React, { useState } from "react";
 
-const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
+const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onSubmit }) => {
   const [user, setUser] = useState<UserData>({
     name: "",
     username: "",
@@ -30,7 +30,6 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
   ) => {
     const { name, value } = e.target;
 
-    // Deep update for nested fields
     if (name.includes(".")) {
       const keys = name.split(".");
       setUser(prev => ({
